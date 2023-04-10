@@ -11,10 +11,10 @@
 let library = [];
 
 function Book (name, author, pages, read) {
-    this.title = name;
-    this.author = author;
-    this.pages = pages;
-    this.read = readOrNot;
+    this.Title = name;
+    this.Author = author;
+    this.AmountOfPages = pages;
+    this.Read = readOrNot;
     addBookToLibrary(this)
 }
 
