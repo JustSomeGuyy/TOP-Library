@@ -15,13 +15,28 @@
     </div>
 
     <div class="main">
-        <div class="nav-menu">
+        <div onclick="showForm()">
             <button>Add Book</button>
         </div>
-        <div class="cards">
-            <input type="checkbox"  name="Read" id="read" onclick="readOrNot()">
+        <div class="displayLibrary">
         </div>
     </div>
+
+    <form id="bookForm">
+        <label for="titleInput">Title:</label>
+        <input type="text" id="titleInput"><br>
+      
+        <label for="authorInput">Author:</label>
+        <input type="text" id="authorInput"><br>
+      
+        <label for="pagesInput">Pages:</label>
+        <input type="number" id="pagesInput"><br>
+      
+        <label for="Read">Have you read this book?</label>
+        <input type="checkbox" id="Read"><br>
+      
+        <button type="button" onclick="addBook()">Submit</button>
+      </form>
 
     <div class="footer">
         <p>Copyright 2023 by Tyler Wolfe <a href="https://github.com/JustSomeGuyy"><img src="images/github-mark.png" alt="GitHub logo that is a link to Tyler Wolfe's GitHub account"></a></p>

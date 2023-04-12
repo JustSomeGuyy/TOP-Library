@@ -1,40 +1,44 @@
-
-
-
-
-
-
-
-
-// The library array to hold the books.
-
-let library = [];
-
-function Book (name, author, pages, read) {
-    this.Title = name;
-    this.Author = author;
-    this.AmountOfPages = pages;
-    this.Read = readOrNot;
-    addBookToLibrary(this)
+function showForm() {
+    let form = document.getElementById("bookForm");
+    form.style.display = "block";
 }
 
-function addBookToLibrary(Book){
-    library.push(Book)
-}
+const library = [];
 
-function readOrNot(){
-    if(document.getElementById('read').checked){
-        this.read = 'Read';
-    } else {
-        this.read = 'Not read'
+    function Book(name, author, pages, read) {
+      this.title = name;
+      this.author = author;
+      this.amountOfPages = pages;
+      this.haveYouRead = read;
+      return this;
     }
-}
 
+    function addBook(){
+        let title = document.getElementById('titleInput').value;
+        let author = document.getElementById('authorInput').value;
+        let pages = document.getElementById('pagesInput').value;
+        let read = document.getElementById('Read').checked;
+        let book = new Book(title, author, pages, read);
+        library.push(book);
+        document.getElementById("bookForm").reset();
+        displayLibrary();
+    }
 
-const bookOne = new Book('Carrie', 'Stephen King', 199, 'Not read');
-const bookTwo = new Book('The Shining', 'Stephen King', 447, 'Not read')
-
-console.log(library)
-
-
-
+    function displayLibrary() {
+        let display = document.getElementById("displayLibrary");
+        display.innerHTML = ""; // clear the display
+    
+        for (let i = 0; i < library.length; i++) {
+            let book = library[i];
+            let info = "<p>Title: " + book.title + "</p>" +
+                "<p>Author: " + book.author + "</p>" +
+                "<p>Pages: " + book.amountOfPages + "</p>" +
+                "<p>Read: <input type='checkbox' id='readCheckbox" + i + "' onclick='updateReadStatus(" + i + ")' " + (book.haveYouRead ? "checked" : "") + "></p><hr>";
+            display.innerHTML += info;
+        }
+    }
+    
+    function updateReadStatus(index) {
+        let readCheckbox = document.getElementById("readCheckbox" + index);
+        library[index].haveYouRead = readCheckbox.checked;
+    }
