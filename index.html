@@ -6,37 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Xanh+Mono&display=swap" rel="stylesheet">
     <title>TOP Library</title>
 </head>
 <body>
-    
+    <div class="overlay"></div>
     <div class="header">
-        <h1 class="logo">Library</h1>
+        <h1 class="logo">Your Digital Library</h1>
     </div>
 
     <div class="main">
-        <div onclick="showForm()">
-            <button>Add Book</button>
+        <div>
+            <button id="addBookButton" class="button-38" onclick="openForm()">Add Book</button>
         </div>
-        <div class="displayLibrary">
+        <div class="display">
+            <div id="displayLibrary"></div>
         </div>
     </div>
 
-    <form id="bookForm">
-        <label for="titleInput">Title:</label>
-        <input type="text" id="titleInput"><br>
-      
-        <label for="authorInput">Author:</label>
-        <input type="text" id="authorInput"><br>
-      
-        <label for="pagesInput">Pages:</label>
-        <input type="number" id="pagesInput"><br>
-      
-        <label for="Read">Have you read this book?</label>
-        <input type="checkbox" id="Read"><br>
-      
-        <button type="button" onclick="addBook()">Submit</button>
-      </form>
+    <div class="form-popup" id="popup">
+            <form id="bookForm" class="form-container">
+            <label for="titleInput">Title:</label>
+            <input type="text" id="titleInput" class="input-field">
+            <br>
+            <label for="authorInput">Author:</label>
+            <input type="text" id="authorInput" class="input-field">
+            <br>
+            <label for="pagesInput">Pages:</label>
+            <input type="number" = 'text' id="pagesInput" class="input-field">
+            <br>
+            <label for="Read">Did you read this book?</label>
+            <select id="readSelect" name="read">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+        </form>
+        <div class="button-align">
+            <button type="button" class="button-38" onclick="addBook()">Submit</button>
+            <button type="button" class="button-38 cancel" onclick="closeForm()">Close</button>
+        </div>
+    </div>
 
     <div class="footer">
         <p>Copyright 2023 by Tyler Wolfe <a href="https://github.com/JustSomeGuyy"><img src="images/github-mark.png" alt="GitHub logo that is a link to Tyler Wolfe's GitHub account"></a></p>

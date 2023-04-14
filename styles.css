@@ -5,3 +5,178 @@
 img {
     height: 20px;
 }
+
+form {
+    z-index: 1;
+    background-color: bisque;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+
+.header {
+    height: 20dvh;
+    background-color: rgba(0, 205, 205, 0.565);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.main {
+    height: 70dvh;
+    width: 100dvw;
+    padding: 1rem;
+    font-family: 'Xanh Mono', monospace;
+}
+
+.button-38 {
+    font-family: 'Xanh Mono', monospace;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-38:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .button-38:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .button-38:focus-visible {
+    box-shadow: none;
+  }
+
+.form-popup {
+    font-family: 'Xanh Mono', monospace;
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 40%;
+    border: 3px solid #f1f1f1;
+    z-index: 10000;
+    background-color: #f1f1f1;
+}
+
+.button-align {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.form-container {
+    font-size: 1.1rem;
+    max-width: 400px;
+    padding: 2rem 2rem 0 2rem;
+    background-color: #f1f1f1;
+}
+
+.form-container input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-container select {
+    font-family: 'Xanh Mono', monospace;
+    margin-right: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-popup .cancel {
+    background-color: red;
+    color: white;
+}
+
+
+.form-popup .cancel:hover {
+    background-color: rgb(219, 11, 11);
+    color: rgb(254, 254, 254);
+}
+
+.display {
+    padding: 1rem;
+}
+
+#displayLibrary {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bookCard {
+    margin: .5rem;
+    padding: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid rgba(53, 53, 53, 0.41);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.bookCard p {
+    margin: .3rem 0;
+}
+
+.bookCard select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Xanh Mono', monospace;
+
+}
